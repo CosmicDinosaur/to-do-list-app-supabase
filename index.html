@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To-do list</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="config-banner" id="config-banner" hidden>
+      <p>
+        Add your Supabase URL and anon key: copy
+        <code>config.example.js</code> to <code>config.js</code> and edit the
+        placeholders, or replace them in <code>config.js</code>.
+      </p>
+    </div>
+
+    <section class="auth" id="auth-section" hidden>
+      <h2 class="auth__title" id="auth-title">Sign in</h2>
+      <p class="auth__hint" id="auth-hint">
+        If your project requires email confirmation, check your inbox after
+        signing up before you can sign in.
+      </p>
+      <form class="auth__form" id="auth-form" autocomplete="on">
+        <label class="auth__label" for="auth-email">Email</label>
+        <input
+          class="auth__input"
+          id="auth-email"
+          name="email"
+          type="email"
+          required
+          autocomplete="email"
+        />
+        <label class="auth__label" for="auth-password">Password</label>
+        <input
+          class="auth__input"
+          id="auth-password"
+          name="password"
+          type="password"
+          required
+          minlength="6"
+          autocomplete="current-password"
+        />
+        <p class="auth__error" id="auth-error" role="alert" hidden></p>
+        <button class="auth__submit" type="submit" id="auth-submit">Sign in</button>
+      </form>
+      <p class="auth__switch">
+        <button class="auth__toggle" type="button" id="auth-toggle-mode">
+          Need an account? Sign up
+        </button>
+      </p>
+    </section>
+
+    <main class="app" id="app-section" hidden>
+      <header class="app__header">
+        <h1 class="app__title">To-do list</h1>
+        <div class="app__session">
+          <span class="app__email" id="user-email" aria-live="polite"></span>
+          <button class="app__sign-out" type="button" id="sign-out">Sign out</button>
+        </div>
+      </header>
+      <form class="add-form" id="add-form" autocomplete="off">
+        <label class="sr-only" for="task-input">New task</label>
+        <input
+          class="add-form__input"
+          id="task-input"
+          name="task"
+          type="text"
+          placeholder="What needs doing?"
+          maxlength="500"
+        />
+        <button class="add-form__submit" type="submit" id="add-submit">Add</button>
+      </form>
+      <p class="empty-state" id="empty-state" hidden>No tasks yet. Add one above.</p>
+      <ul class="task-list" id="task-list" aria-live="polite"></ul>
+      <div class="toolbar" id="toolbar" hidden>
+        <button class="toolbar__clear" type="button" id="clear-completed">
+          Clear completed
+        </button>
+      </div>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
