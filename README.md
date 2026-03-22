@@ -60,6 +60,7 @@ Use **http://** (or **https://** if you use another server with TLS). Opening `i
 | `config.js` | Your real keys (create locally; listed in `.gitignore`) |
 | `supabase/schema.sql` | Table, RLS, and trigger (run in Supabase SQL Editor) |
 | `.gitignore` | Keeps local secrets out of version control |
+| `LICENSE` | License terms (MIT) |
 
 ## Security and publishing
 
@@ -75,4 +76,4 @@ Use **http://** (or **https://** if you use another server with TLS). Opening `i
 
 ## License
 
-Add a `LICENSE` file to the repository if you want to specify terms for others (for example MIT).
+This project is licensed under the **MIT License**. See the [`LICENSE`](LICENSE) file in the repository root for the full text.
