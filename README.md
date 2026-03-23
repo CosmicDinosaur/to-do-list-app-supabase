@@ -125,8 +125,8 @@ flowchart TD
     APP --> TODOUI[Todo list UI]
     APP --> CFG[config.js]
     APP --> SB[Supabase client]
-    SB --> AUTH[auth.* APIs]
-    SB --> TODOS[from('todos') CRUD]
+    SB --> AUTH["auth.* APIs"]
+    SB --> TODOS["from('todos') CRUD"]
 ```
 
 - `index.html` provides the DOM structure.
